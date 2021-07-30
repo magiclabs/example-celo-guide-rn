@@ -173,7 +173,7 @@ export default function App() {
         </ScrollView>
       }
       <StatusBar style="auto" />
-      <magic.Relayer />
+      <magic.Relayer /> // Required to render the `Relayer` component into our app for Magic to properly work
     </View>
   );
 }
