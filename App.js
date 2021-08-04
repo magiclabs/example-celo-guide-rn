@@ -115,7 +115,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {
+    {
       !user ? 
         <View>
           <Text style={styles.header}>Login or Signup</Text>
@@ -173,7 +173,8 @@ export default function App() {
         </ScrollView>
       }
       <StatusBar style="auto" />
-      <magic.Relayer /> // Required to render the `Relayer` component into our app for Magic to properly work
+      {/* Below line is required to render the `Relayer` component into our app for Magic to properly work */}
+      <magic.Relayer />
     </View>
   );
 }

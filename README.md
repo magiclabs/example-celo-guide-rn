@@ -176,7 +176,7 @@ Since Celo is a mobile-first blockchain, this will also be covering how you can 
 ```
 $ git clone https://github.com/magiclabs/example-celo-guide-rn.git
 $ cd example-celo-guide-rn
-$ mv .env.local .env // enter your API Key into .env (from https://dashboard.magic.link)
+// enter your API key from https://dashboard.magic.link into the `Magic()` constructor in `magic.js`
 $ yarn install
 $ yarn start
 ```
@@ -255,7 +255,8 @@ export default function App() {
           // Show Logged In User View
         </ScrollView>
       }
-      <magic.Relayer /> // Required to render the `Relayer` component into our app for Magic to properly work
+      {/* Below line is required to render the `Relayer` component into our app for Magic to properly work */}
+      <magic.Relayer />
     </View>
   );
 }
@@ -349,5 +350,3 @@ return (
 ## Done
 
 You now have a web and mobile app built on Celo, which lets users login/create a wallet with just a magic link and interact with the Celo blockchain. 
-
-
